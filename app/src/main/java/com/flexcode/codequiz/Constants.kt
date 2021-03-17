@@ -2,6 +2,10 @@ package com.flexcode.codequiz
 
 object Constants {
 
+    const val USER_NAME: String = "userName"
+    const val TOTAL_QUESTIONS: String = "totalQuestions"
+    const val CORRECT_ANSWERS: String = "correctAnswers"
+
     fun getQuestions(): ArrayList<Question>{
         val questionList = ArrayList<Question>()
 

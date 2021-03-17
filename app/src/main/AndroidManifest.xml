@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeQuiz">
-        <activity android:name=".QuestionsActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".QuestionsActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustResize">

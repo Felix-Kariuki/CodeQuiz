@@ -6,4 +6,10 @@
     <string name="please_enter_your_name">Please Enter your Name</string>
     <string name="welcome">Welcome</string>
     <string name="submit">Submit</string>
+    <string name="FINISH">FINISH</string>
+    <string name="next">NEXT</string>
+    <string name="result">Result</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="congrats">Congratulations!</string>
+    <string name="username">UserName</string>
 </resources>
