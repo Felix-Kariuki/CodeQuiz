@@ -21,13 +21,14 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:textSize="22sp"
-            android:text="What Country does this flag belong to"
+            android:text="@string/quiz"
             android:textColor="@color/colorBlack"/>
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/argentina"
             />
         <LinearLayout
