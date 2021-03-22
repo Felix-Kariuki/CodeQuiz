@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
             }else {
                 val intent = Intent(this, QuestionsActivity::class.java)
-                intent.putExtra(Constants.USER_NAME, etName.toString())
+                intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent)
                 finish()
             }

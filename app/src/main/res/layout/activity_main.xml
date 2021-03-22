@@ -61,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
                     android:textColor="@color/colorBlack"
+                    android:maxLines="1"
                     android:textColorHint="@color/colorGrey"/>
 
             </com.google.android.material.textfield.TextInputLayout>

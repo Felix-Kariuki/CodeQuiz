@@ -29,7 +29,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/argentina"
             />
         <LinearLayout
             android:id="@+id/progressDetails"

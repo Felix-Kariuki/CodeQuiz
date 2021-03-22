@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity"
     android:orientation="vertical"
-    android:background="@color/purple_200"
+    android:background="@color/ColorBg"
     android:gravity="center_horizontal"
     android:padding="20dp">
     <TextView
@@ -22,10 +22,10 @@
 
     <ImageView
         android:id="@+id/ivTrophy"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="350dp"
         android:contentDescription="@string/congratulations"
-        android:src="@drawable/trophy3"
+        android:src="@drawable/trophy"
         android:gravity="center"
         />
     <TextView
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/purple_500"
         android:textSize="20sp"
         tools:text="Your score is 8 out of 8"
         />

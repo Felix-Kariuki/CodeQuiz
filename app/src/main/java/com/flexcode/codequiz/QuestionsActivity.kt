@@ -60,7 +60,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvProgress.text = "$mCurrentPosition" + "/" + progressBar.max
 
         tvQuiz.text = question!!.question
-        ivImage.setImageResource(question.image)
+        /*ivImage.setImageResource(question.image)*/
         tvOptionOne.text = question.OptionOne
         tvOptionTwo.text = question.OptionTwo
         tvOptionThree.text = question.OptionThree
