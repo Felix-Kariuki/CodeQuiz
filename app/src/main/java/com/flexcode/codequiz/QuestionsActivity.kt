@@ -22,13 +22,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mCorrectAnswers:Int = 0
     private var mUserName:String? = null
 
-    private val tvProgress = binding.tvProgress
-    private val tvOptionOne = binding.tvOptionOne
-    private val tvOptionThree = binding.tvOptionThree
-    private val tvOptionTwo = binding.tvOptionTwo
-    private val tvOptionFour = binding.tvOptionFour
-    private val btnSubmit = binding.btnSubmit
-    private val progressBar = binding.progressBar
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,14 +37,14 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         setQuestion()
 
-        tvOptionOne.setOnClickListener(this)
-        tvOptionTwo.setOnClickListener(this)
-        tvOptionThree.setOnClickListener(this)
-        tvOptionFour.setOnClickListener(this)
+        binding.tvOptionOne.setOnClickListener(this)
+        binding.tvOptionTwo.setOnClickListener(this)
+        binding.tvOptionThree.setOnClickListener(this)
+        binding.tvOptionFour.setOnClickListener(this)
 
 
         //On click for submit button to check correctness of an answer
-        btnSubmit.setOnClickListener(this)
+        binding.btnSubmit.setOnClickListener(this)
 
     }
 
@@ -60,6 +54,14 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         val question = mQuestionList!![mCurrentPosition - 1]
 
         defaultOptionsView()
+
+        val tvProgress = binding.tvProgress
+        val tvOptionOne = binding.tvOptionOne
+        val tvOptionThree = binding.tvOptionThree
+        val tvOptionTwo = binding.tvOptionTwo
+        val tvOptionFour = binding.tvOptionFour
+        val btnSubmit = binding.btnSubmit
+        val progressBar = binding.progressBar
 
         //setting the btn to submit or finish accordingly
         if (mCurrentPosition == mQuestionList!!.size) {
@@ -81,6 +83,11 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     //changing the default options view to default color and bg
     private fun defaultOptionsView(){
+        val tvOptionOne = binding.tvOptionOne
+        val tvOptionThree = binding.tvOptionThree
+        val tvOptionTwo = binding.tvOptionTwo
+        val tvOptionFour = binding.tvOptionFour
+
         val options = ArrayList<TextView>()
         options.add(0,tvOptionOne)
         options.add(1,tvOptionTwo)
@@ -102,6 +109,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     //selecting the bg  option and changing border color
     //click listeners for btn and answers or options
     override fun onClick(v: View?) {
+        val tvOptionOne = binding.tvOptionOne
+        val tvOptionThree = binding.tvOptionThree
+        val tvOptionTwo = binding.tvOptionTwo
+        val tvOptionFour = binding.tvOptionFour
         when(v?.id) {
             R.id.tvOptionOne ->{
                 selectedOptionView(tvOptionOne, 1)
@@ -150,10 +161,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     //Changing button from submit to go to next question or finish
                     //if its  the last question then.....
                     if (mCurrentPosition == mQuestionList!!.size) {
-                        btnSubmit.text = getString(R.string.FINISH)
+                        binding.btnSubmit.text = getString(R.string.FINISH)
                     }//if not the last question ...
                     else {
-                        btnSubmit.text = getString(R.string.next)
+                        binding.btnSubmit.text = getString(R.string.next)
                     }
                     //setting selected position back to zero so as to go to next quiz
                     mSelectedOptionPosition = 0
@@ -164,6 +175,10 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     //function for clicking btn and setting the drawable bg for correct and wrong
     private fun answerView(answer:Int, drawableView:Int){
+        val tvOptionOne = binding.tvOptionOne
+        val tvOptionThree = binding.tvOptionThree
+        val tvOptionTwo = binding.tvOptionTwo
+        val tvOptionFour = binding.tvOptionFour
         when(answer) {
             1 -> {
                 tvOptionOne.background = ContextCompat.getDrawable(
@@ -194,7 +209,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         defaultOptionsView()
         mSelectedOptionPosition = selectedOptionNum
 
-        tv.setTextColor(Color.parseColor("#000000"))
+        tv.setTextColor(Color.parseColor(getString(R.string.color_black)))
         tv.setTypeface(tv.typeface, Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
                 this,

@@ -10,21 +10,20 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val btnStart = binding.btnStart
-    private val etName = binding.etName
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        btnStart.setOnClickListener {
-            if(etName.text.toString().trim().isEmpty()){
-                Toast.makeText(this, "Please enter your name!",
+        binding.btnStart.setOnClickListener {
+            if(binding.etName.text.toString().trim().isEmpty()){
+                Toast.makeText(this, getString(R.string.enter_name),
                 Toast.LENGTH_SHORT).show()
             }else {
                 val intent = Intent(this, QuestionsActivity::class.java)
-                intent.putExtra(Constants.USER_NAME, etName.text.toString())
+                intent.putExtra(Constants.USER_NAME, binding.etName.text.toString())
                 startActivity(intent)
                 finish()
             }

@@ -13,4 +13,6 @@
     <string name="congrats">Congratulations!</string>
     <string name="username">UserName</string>
     <string name="quiz">What Country does this flag belong to</string>
+    <string name="color_black">#000000</string>
+    <string name="enter_name">Please enter your name!</string>
 </resources>
