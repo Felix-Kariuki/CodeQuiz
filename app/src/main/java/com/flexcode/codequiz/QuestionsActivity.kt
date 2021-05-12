@@ -10,9 +10,11 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.activity_questions.*
+import com.flexcode.codequiz.databinding.ActivityQuestionsBinding
 
 class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var binding: ActivityQuestionsBinding
 
     private var mCurrentPosition:Int = 1
     private var mQuestionList: ArrayList<Question>? = null
@@ -20,13 +22,22 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mCorrectAnswers:Int = 0
     private var mUserName:String? = null
 
+    private val tvProgress = binding.tvProgress
+    private val tvOptionOne = binding.tvOptionOne
+    private val tvOptionThree = binding.tvOptionThree
+    private val tvOptionTwo = binding.tvOptionTwo
+    private val tvOptionFour = binding.tvOptionFour
+    private val btnSubmit = binding.btnSubmit
+    private val progressBar = binding.progressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         //getting the userName from put Extra in intent
         mUserName = intent.getStringExtra(Constants.USER_NAME)
 
-        setContentView(R.layout.activity_questions)
+        binding = ActivityQuestionsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         mQuestionList = Constants.getQuestions()
 
@@ -36,6 +47,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvOptionTwo.setOnClickListener(this)
         tvOptionThree.setOnClickListener(this)
         tvOptionFour.setOnClickListener(this)
+
 
         //On click for submit button to check correctness of an answer
         btnSubmit.setOnClickListener(this)
@@ -51,7 +63,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         //setting the btn to submit or finish accordingly
         if (mCurrentPosition == mQuestionList!!.size) {
-            btnSubmit.text = getString(R.string.FINISH)
+            binding.btnSubmit.text = getString(R.string.FINISH)
         }else {
             btnSubmit.text = getString(R.string.submit)
         }
@@ -59,7 +71,7 @@ class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
         progressBar.progress = mCurrentPosition
         tvProgress.text = "$mCurrentPosition" + "/" + progressBar.max
 
-        tvQuiz.text = question!!.question
+        binding.tvQuiz.text = question.question
         /*ivImage.setImageResource(question.image)*/
         tvOptionOne.text = question.OptionOne
         tvOptionTwo.text = question.OptionTwo
