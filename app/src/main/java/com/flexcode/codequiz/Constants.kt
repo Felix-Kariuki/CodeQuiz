@@ -21,8 +21,8 @@ object Constants {
         //QUESTION TWO
         val quiz2 = Question(2,
             "How is a multi-line comment is Kotlin Done?",
-            "//", "||",
-            "/* */", "\\\\",
+            "cardview-v7", "support-v4",
+            "recyclerview-v7", "recyclerview-v4",
             3
         )
         questionList.add(quiz2)
@@ -38,19 +38,19 @@ object Constants {
 
         //QUESTION FOUR
         val quiz4 = Question(4,
-            "What handles null exceptions in Kotlin?",
-            "sealed classes", "The Kotlin exception",
-            "Lambda functions", "Elvis operator",
+            "how do you make explicit casting in Kotlin?",
+            "using cast operator", "using as operator",
+            "using instanceof operator", "using is operator ",
             4
         )
         questionList.add(quiz4)
 
         //QUESTION FIVE
         val quiz5 = Question(5,
-            "Can java code be converted into Kotlin code",
-            "Yes", "MayBe",
-            "No", "Not Sure",
-            1
+            "Which viewGroup is best for displaying items relative to each other?",
+            "GridView", "Constraint layout",
+            "RelativeViewGroup", "LinearLayout",
+            2
         )
         questionList.add(quiz5)
 
@@ -65,9 +65,9 @@ object Constants {
 
         //QUESTION SEVEN
         val quiz7 = Question(7,
-            "What is the default visibility modifier in Kotlin?",
-            "sealed", "private",
-            "public", "protected",
+            "Which kotlin feature allows singleton keyword?",
+            "Invokestatic keyword", "static keyword",
+            "Companion objects", "Singleton keyword",
             3
         )
         questionList.add(quiz7)
@@ -75,15 +75,13 @@ object Constants {
 
         //QUESTION EIGHT
         val quiz8= Question(8,
-            "Which are the basic data types in Kotlin?",
-            "Arrays and Booleans", "String and Numbers",
-            "Characters", "All of the above",
+            "In Kotlin, what can we do with the Elvis operator ?:",
+            "make a ternary-if statement", "Test if variable is null",
+            "Create a lambda statement", "Use a default value when the first expression is null",
             4
         )
         questionList.add(quiz8)
         return questionList
-
-
 
 
     }
