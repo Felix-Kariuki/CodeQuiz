@@ -24,56 +24,6 @@ class MainActivity : AppCompatActivity() {
         loadInterAd()
         loadBannerAd()
 
-
-
-        //inteStitial ad
-        //var adRequest = AdRequest.Builder().build()
-
-//        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
-//            object : InterstitialAdLoadCallback() {
-//                override fun onAdFailedToLoad(p0: LoadAdError) {
-//                    super.onAdFailedToLoad(p0)
-//                    Log.d(TAG, p0.message)
-//                    mInterstitialAd = null
-//                }
-//
-//                override fun onAdLoaded(p0: InterstitialAd) {
-//                    super.onAdLoaded(p0)
-//                    Log.d(TAG, "Ad was Loaded")
-//                }
-//            })
-
-        //FullScreen Callback
-//        mInterstitialAd!!.fullScreenContentCallback = object : FullScreenContentCallback(){
-//            override fun onAdFailedToShowFullScreenContent(p0: AdError) {
-//                super.onAdFailedToShowFullScreenContent(p0)
-//                Log.d(TAG,"Ad Failed to show")
-//            }
-//
-//            override fun onAdShowedFullScreenContent() {
-//                super.onAdShowedFullScreenContent()
-//                Log.d(TAG,"Ad showed full screen content")
-//                mInterstitialAd = null
-//            }
-//
-//            override fun onAdDismissedFullScreenContent() {
-//                super.onAdDismissedFullScreenContent()
-//                Log.d(TAG,"Ad was dismissed")
-//            }
-//
-//            override fun onAdImpression() {
-//                super.onAdImpression()
-//                Log.d(TAG,"Ad Impression")
-//            }
-//        }
-
-
-//        if (mInterstitialAd != null){
-//            mInterstitialAd?.show(this)
-//        } else {
-//            Log.d("TAG", "The Interstitial ad wasn't ready yet")
-//        }
-
         binding.btnStart.setOnClickListener {
             if (binding.etName.text.toString().trim().isEmpty()) {
                 Toast.makeText(
@@ -144,7 +94,8 @@ class MainActivity : AppCompatActivity() {
     private fun loadInterAd() {
         var adRequest = AdRequest.Builder().build()
 
-        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, object : InterstitialAdLoadCallback() {
+        InterstitialAd.load(this,"ca-app-pub-5201606964951300/5988467582", adRequest,
+            object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.d(TAG, adError?.message)
                 mInterstitialAd = null
