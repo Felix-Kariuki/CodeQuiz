@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.flexcode.codequiz.databinding.ActivityMainBinding
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         loadInterAd()
         loadBannerAd()
 
@@ -92,12 +94,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadInterAd() {
-        var adRequest = AdRequest.Builder().build()
+        val adRequest = AdRequest.Builder().build()
 
-        InterstitialAd.load(this,"ca-app-pub-5201606964951300/5988467582", adRequest,
+        InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest,
             object : InterstitialAdLoadCallback() {
             override fun onAdFailedToLoad(adError: LoadAdError) {
-                Log.d(TAG, adError?.message)
+                Log.d(TAG, adError.message)
                 mInterstitialAd = null
             }
 
