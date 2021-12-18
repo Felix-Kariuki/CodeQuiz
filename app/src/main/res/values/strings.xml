@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Code Quiz</string>
+    <string name="app_name">Kotlin Quiz</string>
     <string name="code_quiz">Code Quiz</string>
     <string name="start">Start</string>
     <string name="name">Name</string>

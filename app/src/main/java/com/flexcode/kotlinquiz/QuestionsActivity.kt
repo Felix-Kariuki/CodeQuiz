@@ -1,4 +1,4 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 
 import android.content.Intent
@@ -8,9 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.flexcode.codequiz.databinding.ActivityQuestionsBinding
+import com.flexcode.kotlinquiz.databinding.ActivityQuestionsBinding
 
 class QuestionsActivity : AppCompatActivity(), View.OnClickListener {
 

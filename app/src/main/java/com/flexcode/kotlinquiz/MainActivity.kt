@@ -1,14 +1,12 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.flexcode.codequiz.databinding.ActivityMainBinding
+import com.flexcode.kotlinquiz.databinding.ActivityMainBinding
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback

@@ -1,4 +1,4 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 object Constants {
 
@@ -21,8 +21,8 @@ object Constants {
         //QUESTION TWO
         val quiz2 = Question(2,
             "How is a multi-line comment is Kotlin Done?",
-            "cardview-v7", "support-v4",
-            "recyclerview-v7", "recyclerview-v4",
+            "##", "<!----!>",
+            "/* */", "//",
             3
         )
         questionList.add(quiz2)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.flexcode.codequiz">
+    package="com.flexcode.kotlinquiz">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -15,13 +15,13 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5201606964951300~5199465250"/>
-        <activity android:name=".ResultActivity"
+        <activity android:name="com.flexcode.kotlinquiz.ResultActivity"
             android:exported="true"/>
-        <activity android:name=".QuestionsActivity"
+        <activity android:name="com.flexcode.kotlinquiz.QuestionsActivity"
             android:screenOrientation="portrait"
             android:exported="true"/>
         <activity
-            android:name=".MainActivity"
+            android:name="com.flexcode.kotlinquiz.MainActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
             <intent-filter>

@@ -39,7 +39,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:955648477276:android:67db5c2ee2bf068207be99",
         "android_client_info": {
-          "package_name": "com.flexcode.codequiz"
+          "package_name": "com.flexcode.kotlinquiz"
         }
       },
       "oauth_client": [

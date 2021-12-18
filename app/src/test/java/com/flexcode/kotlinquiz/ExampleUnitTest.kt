@@ -1,4 +1,4 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 import org.junit.Test
 

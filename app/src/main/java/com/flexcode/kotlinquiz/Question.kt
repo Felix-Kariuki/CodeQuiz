@@ -1,4 +1,4 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 data class Question (
     val id: Int,

@@ -1,9 +1,9 @@
-package com.flexcode.codequiz
+package com.flexcode.kotlinquiz
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.flexcode.codequiz.databinding.ActivityResultBinding
+import com.flexcode.kotlinquiz.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
 
